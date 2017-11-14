@@ -1,9 +1,9 @@
 #include <vector>
-#include<iostream>
+
 #include "caffe/filler.hpp"
 #include "caffe/layers/inner_product_layer.hpp"
 #include "caffe/util/math_functions.hpp"
-using namespace std;
+
 namespace caffe {
 
 template <typename Dtype>
@@ -26,7 +26,6 @@ void InnerProductLayer<Dtype>::Forward_gpu(const vector<Blob<Dtype>*>& bottom,
                             bias_multiplier_.gpu_data(),
                             this->blobs_[1]->gpu_data(), (Dtype)1., top_data);
   }
- 
 }
 
 template <typename Dtype>
